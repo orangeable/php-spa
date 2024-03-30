@@ -1,6 +1,10 @@
 <?php
     $request = explode("/", $_SERVER["REQUEST_URI"]);
     $page = strtolower($request[1]);
+
+    if (!strlen($page)) {
+        $page = "home";
+    }
 ?>
 
 <!DOCTYPE html>
